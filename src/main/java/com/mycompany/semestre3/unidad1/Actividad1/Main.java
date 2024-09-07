@@ -57,7 +57,7 @@ public class Main {
                     break;
                     
                 case 2:
-                    System.out.println("--=={ Movimientos }==--");
+                    MenuMovimientos();
                     break;
                     
                 case 0:
@@ -148,6 +148,10 @@ public class Main {
                 case 0:
                     System.out.println("Volviendo al inicio . . .");
                     break;
+                    
+                default:
+                    System.out.println("Opcion no disponible");
+                    break;
 
             }
         }while(opc != 0);
@@ -204,6 +208,92 @@ public class Main {
         }while(opt.equalsIgnoreCase("n") || opt.equalsIgnoreCase("no"));
         
         return new Articulo(nombre, marca, codigo, precio, existencia, categoria);
+    }
+    
+    public static void MenuMovimientos() {
+        // variables
+        int opc = 0;
+        int unidades = 0;
+        int id = 0;
+        String categoria = "";
+        
+        do {
+            // Opciones del menu
+            lines();
+            System.out.println("\t--=={ Catalogo }==--");
+            System.out.println("[1] Compras de articulos");
+            System.out.println("[2] Ventas de articulos");
+            System.out.println("[3] Reporte general");
+            System.out.println("[4] Reporte por categoria");
+            System.out.println("[0] Volver al inicio");
+            
+            System.out.print("\n\tElige >");
+            opc = in.nextInt();
+            
+            lines();
+            
+            // evaluar
+            switch(opc) {
+                case 1:
+                    System.out.println("--=={ Comprar articulos }==--");
+                    System.out.println("Lista de articulos: ");
+                    System.out.println(control.getEnumList());
+                    
+                    System.out.print("Elige el id del articulo: ");
+                    id = in.nextInt();
+                    System.out.println("Elije el numero de articulos a comprar: ");
+                    unidades = in.nextInt();
+                    
+                    if(control.updateExistencia(id, unidades)) {
+                        System.out.println("Transaccion completa con exito!");
+                    }
+                    break;
+                    
+                case 2:
+                    System.out.println("--=={ Vender articulos }==--");
+                    System.out.println("Lista de articulos: ");
+                    System.out.println(control.getEnumList());
+                    
+                    System.out.print("Elige el id del articulo: ");
+                    id = in.nextInt();
+                    System.out.println("Elije el numero de articulos a vender: ");
+                    unidades = in.nextInt();
+                    
+                    if(control.updateExistencia(id, -unidades)) {
+                        System.out.println("Transaccion completa con exito!");
+                    }
+                    break;
+                    
+                case 3:
+                    System.out.println("--=={ Reporte general }==--");
+                    System.out.println(control.MostrarTodo());
+                    
+                    System.out.println("\nAdvertencia: Para poder editar la informacion vital debe ser super usuario!");
+                    pause();
+                    break;
+                    
+                case 4:
+                    System.out.println("\t--=={ Categorias }==--");
+                    System.out.println("Selecione la categoria: ");
+                    System.out.println(control.getCategorias());
+                    
+                    System.out.print("\nBuscar >_ ");
+                    categoria = in.next();
+                    
+                    System.out.println(control.BuscarPorCategoria(categoria));
+                    
+                    pause();
+                    lines();
+                    
+                case 0:
+                    System.out.println("Volviendo al inicio . . .");
+                    break;
+                    
+                default:
+                    System.out.println("Opcion no disponible");
+                    break;
+            }
+        } while(opc != 0);
     }
     
     /* Otros metodos */

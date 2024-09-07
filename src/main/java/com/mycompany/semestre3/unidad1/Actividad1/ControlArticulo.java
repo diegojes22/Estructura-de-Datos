@@ -1,5 +1,10 @@
 package com.mycompany.semestre3.unidad1.Actividad1;
 
+import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 /**
  * INSTITUTO TECNOLOGICO DE LA PIEDAD
  * 
@@ -93,6 +98,18 @@ public class ControlArticulo {
         return consulta;
     }
     
+    public String BuscarPorCategoria(String categoria) {
+        String consulta = "";
+        
+        for(int i = 0; i < index; i++) {
+            if(inventario[i].getCategoria().equalsIgnoreCase(categoria)) {
+                consulta += inventario[i];
+            }
+        }
+        
+        return consulta;
+    }
+    
     /**
      * CompararNombres() -> bool
      * 
@@ -178,6 +195,56 @@ public class ControlArticulo {
         }
         
         return false;
+    }
+    
+    public String getCategorias() {
+        String categorias = "";
+        
+        for(int i = 0; i < index; i++) {
+            String c = inventario[i].getCategoria() + " ";
+        }
+        
+        categorias = Arrays.stream(categorias.split((" "))).distinct().collect(Collectors.joining(" "));
+        
+        return categorias;
+    }
+    
+    public String getEnumList() {
+        String lista = "";
+        
+        for(int i = 0; i < index; i++) {
+            lista += (i+1) + inventario[i].getNombre() + "\n";
+        }
+        
+        return lista;
+    }
+    
+    public boolean updateExistencia(int id, int unidades) {
+        if(id < 0 || id > index) {
+            System.out.println("Error: Noexiste ningun articulo con ese ID!");
+            return false;
+        }
+        
+        // venta de articulos
+        if(unidades < 0) {
+            if(inventario[id].getExistencia() < (-1)*unidades) {
+                System.out.println("Advertencia: No hay suficientes articulos para vender.");
+                return false;
+            }else{
+                inventario[id].setExistencia(
+                    inventario[id].getExistencia() + unidades
+                );
+            }
+        }
+        
+        // compra de unidades
+        else if (unidades > 0) {
+            inventario[id].setExistencia(
+                    inventario[id].getExistencia() + unidades
+                );
+        }
+        
+        return true;
     }
     
     /**
