@@ -6,8 +6,16 @@ import java.util.Scanner;
 /**
  * INSTITUTO TECNOLOGICO DE LA PIEDAD
  * 
+ * ESTRUCTURA DE DATOS
+ * PRACTICA 1
+ * UNIDAD 1
+ * 
  * Autor: Diego Jesus Muñoz Andrade
  * Github: @diegojes22
+ * IDE: Apache NetBeans
+ * OS: Arch Linux
+ * 
+ * Main.java
  * 
  * My Message:
  * Por favor, no robes este codigo :(
@@ -22,6 +30,7 @@ import java.util.Scanner;
 public class Main {
     /* Atributos globales */
     static Scanner in = new Scanner(System.in);
+    static ControlArticulo control = new ControlArticulo();
     
     /* Main */
     public static void main(String[] args) {
@@ -31,10 +40,10 @@ public class Main {
         // Mainloop
         do{
             // Main Menu
-            System.out.println("--=={ Inicio }==--");
+            lines();
+            System.out.println("\t--=={ Inicio }==--");
             System.out.println("[1] Catalogo");
-            System.out.println("[2] Opcion 2");
-            System.out.println("[3] Opcion 3");
+            System.out.println("[2] Movimientos");
             System.out.println("[0] Salir del programa");
             
             System.out.print("\nElige >");
@@ -44,15 +53,11 @@ public class Main {
             // Evaluar opcion
             switch(opc) {
                 case 1:
-                    
+                    MenuCatalogo();
                     break;
                     
                 case 2:
-                    System.out.println("--=={ Opcion 2 }==--");
-                    break;
-                    
-                case 3:
-                    System.out.println("--=={ Opcion 3 }==--");
+                    System.out.println("--=={ Movimientos }==--");
                     break;
                     
                 case 0:
@@ -62,9 +67,9 @@ public class Main {
                     
                 default:
                     // Don't read
-                    if(opc == 22 || opc == -775)  System.out.println("Como encontraste esto? !no deberias estar aqui! Para mas informacion busca Serial Designation [] en google.");
+                    if(opc == 22 || opc == -775)  System.out.println("Como encontraste esto? !no deberias estar aqui! Para mas informacion busca Serial Designation [letra] en google.");
 
-                    System.out.println("Esa opcion no esta disponible o no existe.");
+                    System.out.println("Esta opcion no esta disponible o no existe.");
                     pause();
                     break;
             }
@@ -75,43 +80,139 @@ public class Main {
     }
     
     /* Submenus */
+    /**
+     * MenuCatalogo() -> void
+     * 
+     * En este submenu "MenuCatalogo" estan todas las opciones y operaciones
+     * principales a la hora de manejar y llevar el control de los
+     * articulos en esta simulacion. 
+     * :>
+     */
     public static void MenuCatalogo() {
         // variables
         int opc = 0;
+        String nombre;
         
         do{
             // Opciones del menu
             lines();
             System.out.println("\t--=={ Catalogo }==--");
-            System.out.println("\t[0] Salir");
+            System.out.println("[1] Altas");
+            System.out.println("[2] Bajas");
+            System.out.println("[3] Buscar por nombre");
+            System.out.println("[4] Catalogo de articulos");
+            System.out.println("[0] Volver al inicio");
             
-            System.out.println("\n\tElige >");
+            System.out.print("\n\tElige >");
             opc = in.nextInt();
+            
+            lines();
             
             // evaluar
             switch(opc) {
                 case 1:
-                    System.out.println("--=={ Opcion 1 }==--");
-                    System.out.println("No hay nada aqui porque no lo he programado.\n");
+                    System.out.println("\t--=={ Altas }==--");
+                    System.out.println("Espacios usados: "+control.getEspaciosOcupados()+"\n");
+                    control.Agregar(LeerArticulo());
+                    
+                    break;
+                    
+                case 2:
+                    System.out.println("\t--=={ Bajas }==--");
+                    
+                    System.out.print("Ingrese el nombre del elemento a eliminar: ");
+                    nombre = in.nextLine();nombre = in.nextLine();
+                    
+                    control.EliminarPorNombre(nombre);
+                    
+                    break;
+                    
+                case 3:
+                    System.out.println("\t--=={ Buscar por nombre }==--");
+                    
+                    System.out.print("Ingrese el nombre del elemento a buscar: ");
+                    nombre = in.nextLine();nombre = in.nextLine();
+                    
+                    System.out.println("\n"+control.BuscarPorNombre(nombre));
+                    
+                    pause();
+                    break;
+                    
+                case 4:
+                    System.out.println("\t--=={ Catalogo completo }==--");
+                    System.out.println(control.MostrarTodo());
                     
                     pause();
                     break;
                     
                 case 0:
-                    System.out.println("Volviendo . . .");
+                    System.out.println("Volviendo al inicio . . .");
                     break;
 
             }
-            
-            
         }while(opc != 0);
+    }
+    
+    /**
+     * LeerArticulo() -> void
+     * 
+     * Este metodo se encarga de leer los atributos y devuelve el
+     * objeto "Articulo" de acuerdo a los atributos definidos.
+     * Principalmente esta ya que se simplifica y se ahorran algunas
+     * lineas e codigo. Ya sabes, conceptos de la OOP.
+     * 
+     * @return Objeto de tipo articulo, resultante de leer los datos.
+     */
+    public static Articulo LeerArticulo() {
+        // Variables
+        String nombre = null;
+        String marca = null;
+        int codigo = 0;
+        float precio = 0;
+        int existencia = 0;
+        String categoria = null;
+        
+        String opt = "n";
+        
+        // ciclo de lectura
+        do {
+            try {
+                System.out.print("Ingrese el nombre del articulo: ");
+                nombre = in.nextLine();nombre = in.nextLine();
+                System.out.print("Ingrese la marca del articulo: ");
+                marca = in.nextLine();
+                System.out.print("Ingrese el codigo: ");
+                codigo = in.nextInt();
+                System.out.print("Ingrese el precio del producto: ");
+                precio = in.nextFloat();
+                System.out.print("Ingrese la existencia del producto: ");
+                existencia = in.nextInt();
+                System.out.print("Ingrese la categoria del producto: ");
+                categoria = in.next();
+                
+                // confirmacion por parte del usuario
+                try {
+                    System.out.print("\nLos datos son correctos? <S/N> ");
+                    opt = in.next();
+                } catch(Exception e) {}
+                
+            } catch(Exception e) {
+                System.err.println("Error de lectura!");
+                System.out.println(e.toString());
+            }
+            
+        }while(opt.equalsIgnoreCase("n") || opt.equalsIgnoreCase("no"));
+        
+        return new Articulo(nombre, marca, codigo, precio, existencia, categoria);
     }
     
     /* Otros metodos */
     /**
-     * lines: imprime una serie de lineas en consola para
-     *        poder separar el contenido o para mejorar
-     *        la estetica.
+     * lines() -> void
+     * 
+     * imprime una serie de lineas en consola para
+     * poder separar el contenido o para mejorar
+     * la estetica.
      */
     public static void lines() {
         for(int i = 0; i < 50; i++) {
@@ -121,10 +222,12 @@ public class Main {
     }
     
     /**
-     * pause: Pequeña pausa hasta que se presiona una tecla.
-     *        Util para poder ver a detalle informacion que
-     *        se imnprime o simplemente para poner un freno.
-     *        LA IMAGINACION ES EL LIMITE ;> 
+     * pause() -> void
+     * 
+     * Pequeña pausa hasta que se presiona una tecla.
+     * Util para poder ver a detalle informacion que
+     * se imnprime o simplemente para poner un freno.
+     * LA IMAGINACION ES EL LIMITE ;> 
      * 
      */
     public static void pause() {
