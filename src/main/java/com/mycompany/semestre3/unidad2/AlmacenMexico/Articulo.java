@@ -1,23 +1,4 @@
-package com.mycompany.semestre3.unidad1.Actividad1;
-
-/**
- * INSTITUTO TECNOLOGICO DE LA PIEDAD
- * 
- * ESTRUCTURA DE DATOS
- * PRACTICA 1
- * UNIDAD 1
- * 
- * Autor: Diego Jesus Muñoz Andrade
- * Github: @diegojes22
- * IDE: Apache NetBeans
- * OS: Arch Linux
- * 
- * Articulo.java
- * 
- * My Message:
- * Ninguno :/
- * 
- */
+package com.mycompany.semestre3.unidad2.AlmacenMexico;
 
 public class Articulo {
     /* Atributos */
@@ -27,15 +8,18 @@ public class Articulo {
     private float precio;
     private int existencia;
     private String categoria;
+    private String descripcion;
     
     /* Metodos */
-    public Articulo(String nombre, String marca, int codigo, float precio, int existencia, String categoria) {
+    // constructor
+    public Articulo(String nombre, String marca, int codigo, float precio, int existencia, String categoria, String descripcion) {
         this.nombre = nombre;
         this.marca = marca;
         this.codigo = codigo;
         this.precio = precio;
         this.existencia = existencia;
         this.categoria = categoria;
+        this.descripcion = descripcion; 
     }
     
     // Getters
@@ -45,6 +29,7 @@ public class Articulo {
     public float getPrecio() { return precio; }
     public int getExistencia() { return existencia; }
     public String getCategoria() { return categoria; }
+    public String getDescripcion() { return descripcion; }
     
     // Setters
     public void setNombre(String nombre) { this.nombre = nombre; }
@@ -53,6 +38,20 @@ public class Articulo {
     public void setPrecio(float precio) { this.precio = precio; }
     public void setExistencia(int existencia) { this.existencia = existencia; }
     public void setCategoria(String categoria) { this.categoria = categoria; }
+    public void setDescripcion(String desccripcion) { this.descripcion = descripcion; }
+    
+    // otros metodos
+    public String[] getAsList() {
+        return new String[] {
+            getNombre(),
+            getMarca(),
+            getCodigo()+"",
+            getPrecio()+"",
+            getExistencia()+"",
+            getCategoria()+"",
+            getDescripcion()
+        };
+    }
     
     // ToString
     @Override
@@ -65,8 +64,5 @@ public class Articulo {
                 ", existencia=" + existencia + 
                 ", categoria=" + categoria + 
         '}';
-    }
-    
-    
-    
+    } 
 }

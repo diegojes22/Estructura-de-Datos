@@ -1,29 +1,10 @@
-package com.mycompany.semestre3.unidad1.Actividad1;
+package com.mycompany.semestre3.unidad2.AlmacenMexico;
 
 import java.util.Arrays;
-import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import javax.swing.table.DefaultTableModel;
 
-/**
- * INSTITUTO TECNOLOGICO DE LA PIEDAD
- * 
- * ESTRUCTURA DE DATOS
- * PRACTICA 1
- * UNIDAD 1
- * 
- * Autor: Diego Jesus Muñoz Andrade
- * Github: @diegojes22
- * IDE: Apache NetBeans
- * OS: Arch Linux
- * 
- * ControlArticulo.java
- * 
- * My Message:
- * Que flojera documentar todo esto. Ojala me pagaran por hacer esto
- * y no al reves.  >:/
- * 
- */
+
 public class ControlArticulo {
     /* Atributos */
     private Articulo[] inventario = null;
@@ -71,8 +52,8 @@ public class ControlArticulo {
      * directamente los atributos y el metodo creara el objeto, y se lo
      * pasara al otro metodo que recibe un objeto para agregarlo.
      */
-    public void Agregar(String nombre, String marca, int codigo, float precio, int existencia, String categoria) {
-        Agregar(new Articulo(nombre, marca, codigo, precio, existencia, categoria));
+    public void Agregar(String nombre, String marca, int codigo, float precio, int existencia, String categoria, String descripcion) {
+        Agregar(new Articulo(nombre, marca, codigo, precio, existencia, categoria, descripcion));
     }
     
     /**
@@ -123,7 +104,7 @@ public class ControlArticulo {
      * se agregen dos objetos con el mismo nombre en la lista y 
      * evitar posibles conflictos y errores.
      */
-    private boolean CompararNombres(String nombre) {
+    public boolean CompararNombres(String nombre) {
         for(int p = 0; p < index; p++) {
             if(inventario[p].getNombre().equalsIgnoreCase(nombre)) {
                 return true;
@@ -142,7 +123,7 @@ public class ControlArticulo {
      * elementos que estan por delante son recorridos para evitar
      * huecos en la lista.
      */
-    public void EliminarPorNombre(String nombre) {
+    public boolean EliminarPorNombre(String nombre) {
         for(int p = 0; p < index; p++) {
             if(inventario[p].getNombre().equalsIgnoreCase(nombre)) {
                 System.out.println("Elemento eliminado!");
@@ -159,9 +140,11 @@ public class ControlArticulo {
                 }
                 
                 index--;
-                break;
+                return true;
             }
         }
+        
+        return false;
     }
     
     /**
@@ -209,19 +192,40 @@ public class ControlArticulo {
         return categorias;
     }
     
-    public String getEnumList() {
-        String lista = "";
+    public DefaultTableModel getEnumTable() {
+        DefaultTableModel dtm = new DefaultTableModel();
+        String[] tableHeaders = {"Id", "Nombre", "Existencia"};
+        Object[] row = new Object[3];
+        
+        for(String th : tableHeaders) dtm.addColumn(th);
         
         for(int i = 0; i < index; i++) {
-            lista += (i+1) + inventario[i].getNombre() + "\n";
+            row[0] = i+"";
+            row[1] = inventario[i].getNombre();
+            row[2] = inventario[i].getExistencia()+"";
+            
+            dtm.addRow(row);
         }
         
-        return lista;
+        return dtm;
+    }
+    
+    public DefaultTableModel getTable() {
+        DefaultTableModel dtm = new DefaultTableModel();
+        String[] tableHeaders = { "Nombre", "Marca", "Codigo", "Precio", "Existencia", "Categoria", "Descripcion"};
+        
+        for(String th : tableHeaders) dtm.addColumn(th);
+        
+        for(int i = 0; i < index; i++) {
+            dtm.addRow(inventario[i].getAsList());
+        }
+        
+        return dtm;
     }
     
     public boolean updateExistencia(int id, int unidades) {
         if(id < 0 || id > index) {
-            System.out.println("Error: Noexiste ningun articulo con ese ID!");
+            System.out.println("Error: No existe ningun articulo con ese ID!");
             return false;
         }
         
@@ -255,5 +259,5 @@ public class ControlArticulo {
      */
     public String getEspaciosOcupados() {
         return (index)+" de "+(max-1);
-    }
+    }    
 }

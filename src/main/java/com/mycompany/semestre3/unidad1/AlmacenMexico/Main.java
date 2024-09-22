@@ -1,4 +1,4 @@
-package com.mycompany.semestre3.unidad1.Actividad1;
+package com.mycompany.semestre3.unidad1.AlmacenMexico;
 
 import java.util.Scanner;
 
