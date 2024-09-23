@@ -1,11 +1,5 @@
 package com.mycompany.semestre3.unidad2.AlmacenMexico;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.net.URI;
-import java.net.URL;
-import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 
 /**
@@ -77,6 +71,7 @@ public class MainWin extends javax.swing.JFrame {
         helpSubmenuBar = new javax.swing.JMenu();
         onlinedocOptMenu = new javax.swing.JMenuItem();
         aboutAppOptMenu = new javax.swing.JMenuItem();
+        aboutVersion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -148,10 +143,20 @@ public class MainWin extends javax.swing.JFrame {
         reportActionBtn.setBackground(new java.awt.Color(102, 102, 102));
         reportActionBtn.setForeground(new java.awt.Color(255, 255, 255));
         reportActionBtn.setText("REPORTES");
+        reportActionBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reportActionBtnActionPerformed(evt);
+            }
+        });
 
         closeSeccion.setBackground(new java.awt.Color(102, 102, 102));
         closeSeccion.setForeground(new java.awt.Color(255, 255, 255));
         closeSeccion.setText("CERRAR SECION");
+        closeSeccion.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                closeSeccionMouseWheelMoved(evt);
+            }
+        });
 
         exitBtn.setBackground(new java.awt.Color(102, 102, 102));
         exitBtn.setForeground(new java.awt.Color(255, 204, 204));
@@ -316,7 +321,30 @@ public class MainWin extends javax.swing.JFrame {
         helpSubmenuBar.add(onlinedocOptMenu);
 
         aboutAppOptMenu.setText("Sobre el programa");
+        aboutAppOptMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aboutAppOptMenuActionPerformed(evt);
+            }
+        });
         helpSubmenuBar.add(aboutAppOptMenu);
+
+        aboutVersion.setText("Version");
+        aboutVersion.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                aboutVersionMouseWheelMoved(evt);
+            }
+        });
+        aboutVersion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aboutVersionActionPerformed(evt);
+            }
+        });
+        aboutVersion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                aboutVersionKeyPressed(evt);
+            }
+        });
+        helpSubmenuBar.add(aboutVersion);
 
         MainMenuBar.add(helpSubmenuBar);
 
@@ -423,6 +451,47 @@ public class MainWin extends javax.swing.JFrame {
         windowZone.add(new WinSale(control));
     }//GEN-LAST:event_saleActionBtnActionPerformed
 
+    private void reportActionBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportActionBtnActionPerformed
+        windowZone.add(new WinCatReport(control));
+    }//GEN-LAST:event_reportActionBtnActionPerformed
+
+    private void aboutAppOptMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutAppOptMenuActionPerformed
+        JOptionPane.showMessageDialog(
+                this, 
+                "Este programa esta en Beta pero las funciones basicas ya estan\n" +
+                "implemntadas con errores minimos. \n\n" + 
+                "Esto es el resultado de mucho empeño y esfuerzo, esto esta echo\n" +
+                "con muchas ganas y si encuentras errores puedes reportarlos \n" +
+                "contactandome. \n\n"+"\t- Serial Designation D"
+        );
+    }//GEN-LAST:event_aboutAppOptMenuActionPerformed
+
+    private void aboutVersionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutVersionActionPerformed
+        JOptionPane.showMessageDialog(
+                this, 
+                "Version: Beta -> Cyn 3 \n" +
+                "Java: OpenJDK 22 - 2024 \n" +
+                "Desing in: Apache NetBeans 18"
+        );
+    }//GEN-LAST:event_aboutVersionActionPerformed
+
+    private void aboutVersionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_aboutVersionKeyPressed
+        System.out.println(evt.getKeyChar());
+    }//GEN-LAST:event_aboutVersionKeyPressed
+
+    private void aboutVersionMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_aboutVersionMouseWheelMoved
+        JOptionPane.showMessageDialog(
+                this, 
+                "Si has descubierto esto te felicito. \n\n"+
+                "Ahora tsu datos son mios *risa maligna*\n" + 
+                ">:D"
+        );
+    }//GEN-LAST:event_aboutVersionMouseWheelMoved
+
+    private void closeSeccionMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_closeSeccionMouseWheelMoved
+        JOptionPane.showMessageDialog( this,  "Estoy solo :( ");
+    }//GEN-LAST:event_closeSeccionMouseWheelMoved
+
     /**
      * @param args the command line arguments
      */
@@ -463,6 +532,7 @@ public class MainWin extends javax.swing.JFrame {
     private javax.swing.JMenuItem SaveOptMenu;
     private javax.swing.JPanel SideMenu;
     private javax.swing.JMenuItem aboutAppOptMenu;
+    private javax.swing.JMenuItem aboutVersion;
     private javax.swing.JButton appendActionBtn;
     private javax.swing.JButton buyActionBtn;
     private javax.swing.JLabel catalogDivTagForSide;

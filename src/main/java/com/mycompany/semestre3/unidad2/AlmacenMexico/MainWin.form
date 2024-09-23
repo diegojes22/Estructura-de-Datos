@@ -79,6 +79,19 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Sobre el programa"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aboutAppOptMenuActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="aboutVersion">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Version"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseWheelMoved" listener="java.awt.event.MouseWheelListener" parameters="java.awt.event.MouseWheelEvent" handler="aboutVersionMouseWheelMoved"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aboutVersionActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="aboutVersionKeyPressed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -328,6 +341,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="REPORTES"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportActionBtnActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator3">
         </Component>
@@ -341,6 +357,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="CERRAR SECION"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseWheelMoved" listener="java.awt.event.MouseWheelListener" parameters="java.awt.event.MouseWheelEvent" handler="closeSeccionMouseWheelMoved"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="exitBtn">
           <Properties>

@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 package com.mycompany.semestre3.unidad2.AlmacenMexico;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author diego
- */
 public class WinSale extends javax.swing.JInternalFrame {
 
     /* ------==[ Atributos ]==------ */

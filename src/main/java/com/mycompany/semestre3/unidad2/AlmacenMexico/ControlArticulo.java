@@ -1,7 +1,9 @@
 package com.mycompany.semestre3.unidad2.AlmacenMexico;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 import javax.swing.table.DefaultTableModel;
 
 
@@ -180,16 +182,16 @@ public class ControlArticulo {
         return false;
     }
     
-    public String getCategorias() {
+    public String[] getCategorias() {
         String categorias = "";
-        
         for(int i = 0; i < index; i++) {
-            String c = inventario[i].getCategoria() + " ";
+            categorias += inventario[i].getCategoria() + " ";
         }
         
-        categorias = Arrays.stream(categorias.split((" "))).distinct().collect(Collectors.joining(" "));
+        String[] lista = categorias.split(" ");
         
-        return categorias;
+        Set<String> sinDuplicados = new LinkedHashSet<>(Arrays.asList(lista));
+        return sinDuplicados.toArray(new String[0]);
     }
     
     public DefaultTableModel getEnumTable() {

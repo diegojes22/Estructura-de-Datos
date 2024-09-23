@@ -154,6 +154,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Cantidad de articulos"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel2MouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSpinner" name="cantidadIn">
           <Properties>

@@ -79,6 +79,11 @@ public class WinShop extends javax.swing.JInternalFrame {
 
         jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setText("Cantidad de articulos");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
 
         cantidadIn.setFocusCycleRoot(true);
 
@@ -178,6 +183,10 @@ public class WinShop extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Error a la hora de realizar la transaccion: \n"+e.getMessage(), "Error: "+e.getClass(), JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_comprarBtnActionPerformed
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        JOptionPane.showMessageDialog(null, "Como has encontrado esto? Porque estas aqui? \nQue esta pasando!?", "Ehhh???", JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_jLabel2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
