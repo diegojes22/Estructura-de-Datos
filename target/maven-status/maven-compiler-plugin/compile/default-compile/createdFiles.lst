@@ -1,6 +1,7 @@
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$8.class
 ExampleGUI/MainWindow$2.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$1.class
+ExampleGUI/UsoJList$4.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$10.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$20.class
 ExampleGUI/EjemploMenu.class
@@ -12,13 +13,18 @@ com/mycompany/semestre3/unidad1/TestListaEnlazada.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinCatReport$3.class
 com/mycompany/semestre3/unidad2/MetodosRecursivos.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$4.class
+ExampleGUI/UsoJList$1.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$13.class
+com/mycompany/semestre3/unidad2/genericos/Control.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/ControlArticulo.class
+ExampleGUI/UsoJList$5.class
 ExampleGUI/VentanaHijaAgregar$1.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinShop.class
+com/mycompany/semestre3/unidad2/genericos/MetodoGenerico.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinTableInfo.class
 ExampleGUI/MainWindow$3.class
 com/mycompany/semestre3/unidad1/AlmacenMexico/Main.class
+com/mycompany/semestre3/unidad2/genericos/MetodosSobrecargados.class
 ExampleGUI/MainWindow$1.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$16.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$7.class
@@ -26,6 +32,7 @@ ExampleGUI/Persona.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$21.class
 ExampleGUI/VentanaHijaListar.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$12.class
+ExampleGUI/UsoJList$2.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$19.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinDelete$1.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinShop$1.class
@@ -33,10 +40,13 @@ com/mycompany/semestre3/unidad2/AlmacenMexico/WinAppend$3.class
 ExampleGUI/VentanaHijaListar$1.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinCatReport$2.class
 com/mycompany/semestre3/Semestre3.class
+com/mycompany/semestre3/unidad2/genericos/TestControlGenerico.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$15.class
 ExampleGUI/EjemploMenu$3.class
+ExampleGUI/UsoJList$6.class
 ExampleGUI/ControlPersona.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$3.class
+com/mycompany/semestre3/unidad2/genericos/Persona.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$18.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinCatReport.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/Articulo.class
@@ -52,6 +62,8 @@ ExampleGUI/MainWindow.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$2.class
 ExampleGUI/EjemploMenu$2.class
 ExampleGUI/EjemploMenu$4.class
+ExampleGUI/UsoJList$3.class
+ExampleGUI/UsoJList$7.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$11.class
 com/mycompany/semestre3/unidad1/Agenda.class
 net/diego/mx/dutils/DUtils.class
@@ -66,4 +78,5 @@ ExampleGUI/VentanaHijaAgregar.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$14.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$17.class
 ExampleGUI/VentanaHijaAgregar$2.class
+ExampleGUI/UsoJList.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$5.class

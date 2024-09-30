@@ -1,9 +1,5 @@
-package ExampleGUI;
+package com.mycompany.semestre3.unidad2.genericos;
 
-/**
- *
- * @author diego
- */
 public class Persona {
     /* Atributos */
     private String nombre;
