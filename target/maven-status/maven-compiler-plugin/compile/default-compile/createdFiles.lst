@@ -5,6 +5,7 @@ com/mycompany/semestre3/unidad3/cenaduria/VerPedidoPanel$2.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$10.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$20.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinTableInfo$1.class
+com/mycompany/semestre3/unidad3/TestPilaGenerica.class
 ExampleGUI/EjemploMenu$1.class
 com/mycompany/semestre3/unidad3/adminPack/Pila.class
 com/mycompany/semestre3/unidad3/adminPack/MainForm$1.class
@@ -26,6 +27,7 @@ com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$16.class
 com/mycompany/semestre3/unidad3/adminPack/utils/HelpDialog$2$1.class
 com/mycompany/semestre3/unidad3/adminPack/utils/ErrorDialog.class
 ExampleGUI/VentanaHijaListar.class
+com/mycompany/semestre3/unidad3/colecciones/UsoArrays.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$19.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinDelete$1.class
 com/mycompany/semestre3/unidad3/adminPack/utils/ExitDialog$3.class
@@ -98,6 +100,7 @@ com/mycompany/semestre3/unidad3/cenaduria/WInPedidos$3.class
 com/mycompany/semestre3/unidad3/adminPack/MainForm$2.class
 ExampleGUI/UsoJList$2.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinShop$1.class
+com/mycompany/semestre3/unidad3/PilaGenerica.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinAppend$3.class
 ExampleGUI/VentanaHijaListar$1.class
 com/mycompany/semestre3/Semestre3.class
