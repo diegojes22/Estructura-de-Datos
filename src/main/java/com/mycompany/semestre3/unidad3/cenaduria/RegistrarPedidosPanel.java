@@ -249,6 +249,7 @@ public class RegistrarPedidosPanel extends javax.swing.JPanel {
         printTiket.setBackground(new java.awt.Color(51, 51, 51));
         printTiket.setForeground(new java.awt.Color(255, 255, 255));
         printTiket.setText("Imprimir");
+        printTiket.setBorderPainted(false);
         printTiket.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 printTiketActionPerformed(evt);

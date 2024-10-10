@@ -109,9 +109,9 @@ public class Pedido {
     public String[] getAllAsArray() {
         return new String[] {
             this.noPedido+"",
-            this.nombreCliente,
-            this.direccion,
-            this.telefono,
+            this.nombreCliente+"",
+            this.direccion+"",
+            this.telefono+"",
             orden[0]+"", orden[1]+"", orden[2]+"", orden[3]+"", orden[4]+""
         };
     }
