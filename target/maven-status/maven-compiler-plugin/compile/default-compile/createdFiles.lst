@@ -1,3 +1,4 @@
+com/mycompany/semestre3/unidad3/colecciones/UsoPriorityQueue.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$8.class
 com/mycompany/semestre3/unidad3/adminPack/utils/AppendObjDialog$4.class
 ExampleGUI/UsoJList$4.class
@@ -11,6 +12,7 @@ com/mycompany/semestre3/unidad3/cenaduria/MainForm$4.class
 com/mycompany/semestre3/unidad3/adminPack/Pila.class
 com/mycompany/semestre3/unidad3/adminPack/MainForm$1.class
 ExampleGUI/UsoJList$1.class
+com/mycompany/semestre3/unidad3/colecciones/Tiempo.class
 com/mycompany/semestre3/unidad3/cenaduria/WInPedidos$2.class
 com/mycompany/semestre3/unidad3/adminPack/utils/HelpDialog$2.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$13.class
@@ -21,10 +23,13 @@ com/mycompany/semestre3/unidad2/AlmacenMexico/WinShop.class
 com/mycompany/semestre3/unidad2/genericos/MetodoGenerico.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinTableInfo.class
 ExampleGUI/MainWindow$3.class
+com/mycompany/semestre3/unidad3/colecciones/ComparadorPersonaEdadApellido.class
 com/mycompany/semestre3/unidad1/AlmacenMexico/Main.class
 com/mycompany/semestre3/unidad2/genericos/MetodosSobrecargados.class
 ExampleGUI/MainWindow$1.class
+com/mycompany/semestre3/unidad3/colecciones/BusquedaBinaria/TestBS.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$16.class
+com/mycompany/semestre3/unidad3/colecciones/BusquedaBinaria/Main.class
 com/mycompany/semestre3/unidad3/adminPack/utils/HelpDialog$2$1.class
 com/mycompany/semestre3/unidad3/adminPack/utils/ErrorDialog.class
 ExampleGUI/VentanaHijaListar.class
@@ -34,11 +39,14 @@ com/mycompany/semestre3/unidad2/AlmacenMexico/WinDelete$1.class
 com/mycompany/semestre3/unidad3/adminPack/utils/ExitDialog$3.class
 com/mycompany/semestre3/unidad3/adminPack/utils/DeleteObjDialog$2.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinCatReport$2.class
+com/mycompany/semestre3/unidad3/colecciones/TestTiempo.class
+com/mycompany/semestre3/unidad3/colecciones/ComparadorPersonaApellidos.class
 com/mycompany/semestre3/unidad2/genericos/TestControlGenerico.class
 com/mycompany/semestre3/unidad3/cenaduria/AtenderPedidoPanel.class
 ExampleGUI/EjemploMenu$3.class
 com/mycompany/semestre3/unidad3/cenaduria/Pedido.class
 ExampleGUI/UsoJList$6.class
+com/mycompany/semestre3/unidad3/colecciones/CompararPesonaEstatura.class
 ExampleGUI/ControlPersona.class
 com/mycompany/semestre3/unidad2/genericos/Persona.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$18.class
@@ -47,6 +55,7 @@ com/mycompany/semestre3/unidad3/cenaduria/MainForm$2.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/Articulo.class
 com/mycompany/semestre3/unidad3/cenaduria/RegistrarPedidosPanel$5.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$6.class
+com/mycompany/semestre3/unidad3/colecciones/BusquedaBinaria/Persona.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinShop$2.class
 com/mycompany/semestre3/unidad3/adminPack/MainForm$3.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinCatReport$1.class
@@ -79,6 +88,7 @@ com/mycompany/semestre3/unidad3/adminPack/MainForm$5.class
 ExampleGUI/MainWindow$2.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$1.class
 ExampleGUI/EjemploMenu.class
+com/mycompany/semestre3/unidad3/colecciones/CompararPersonaApellidoEdadEstatura.class
 com/mycompany/semestre3/unidad1/AlmacenMexico/ControlArticulo.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinSearch.class
 com/mycompany/semestre3/unidad3/adminPack/utils/ErrorDialog$1.class
@@ -86,10 +96,13 @@ com/mycompany/semestre3/unidad3/adminPack/utils/DeleteObjDialog.class
 com/mycompany/semestre3/unidad1/TestListaEnlazada.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinCatReport$3.class
 com/mycompany/semestre3/unidad2/MetodosRecursivos.class
+com/mycompany/semestre3/unidad3/colecciones/UsoSort.class
 com/mycompany/semestre3/unidad3/colecciones/PruevaCollection.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$4.class
+com/mycompany/semestre3/unidad3/colecciones/Persona.class
 com/mycompany/semestre3/unidad3/adminPack/utils/ExitDialog$2.class
 com/mycompany/semestre3/unidad3/adminPack/utils/DeleteObjDialog$1.class
+com/mycompany/semestre3/unidad3/colecciones/UsoStack.class
 com/mycompany/semestre3/unidad2/genericos/Control.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/ControlArticulo.class
 ExampleGUI/UsoJList$5.class
@@ -97,6 +110,7 @@ com/mycompany/semestre3/unidad3/cenaduria/RegistrarPedidosPanel$3.class
 com/mycompany/semestre3/unidad3/cenaduria/MainForm$3.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$7.class
 ExampleGUI/Persona.class
+com/mycompany/semestre3/unidad3/colecciones/TestPersona.class
 com/mycompany/semestre3/unidad3/adminPack/MainForm.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$21.class
 com/mycompany/semestre3/unidad3/cenaduria/VerPedidoPanel$1.class
@@ -125,6 +139,7 @@ com/mycompany/semestre3/unidad2/AlmacenMexico/WinDelete.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin$9.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/WinSearch$1.class
 com/mycompany/semestre3/unidad3/cenaduria/VerPedidoPanel$3.class
+com/mycompany/semestre3/unidad3/colecciones/ComparadorTiempo.class
 com/mycompany/semestre3/unidad3/cenaduria/VerPedidoPanel.class
 com/mycompany/semestre3/unidad1/AlmacenMexico/Articulo.class
 ExampleGUI/MainWindow.class
@@ -135,6 +150,7 @@ ExampleGUI/EjemploMenu$2.class
 com/mycompany/semestre3/unidad3/cenaduria/RegistrarPedidosPanel$1.class
 com/mycompany/semestre3/unidad3/adminPack/utils/ExitDialog.class
 ExampleGUI/UsoJList$3.class
+com/mycompany/semestre3/unidad3/colecciones/UsoLinkedList.class
 com/mycompany/semestre3/unidad3/adminPack/utils/AppendObjDialog$1.class
 com/mycompany/semestre3/unidad1/Agenda.class
 com/mycompany/semestre3/unidad2/AlmacenMexico/MainWin.class
