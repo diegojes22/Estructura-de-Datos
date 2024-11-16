@@ -86,4 +86,25 @@ public class ControlPersona {
         
         return false;
     }
+    
+    public int buscar(String str, int pos) throws IOException {
+        CPersona obj;
+        String nombre;
+        
+        if(str == null || (pos < 0)) {
+            return -1;
+        }
+        
+        for(int n = pos; n < nregs; n++ ) {
+            obj = valorEn(n);
+            nombre = obj.getNombre();
+            
+            if(nombre.indexOf(str) > -1) {
+                return n;
+            }
+        }
+        
+        return -1;
+        
+    }
 }
